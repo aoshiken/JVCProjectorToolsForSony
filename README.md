@@ -7,7 +7,7 @@ The following changes had been made in comparison to the V0.0.2 developed by ARV
 - Creates 1024 (10Bit) steps Gamma curves for Sony-Projectors instead of only 256 (8Bit) curves for JVC projectors
 - Creates Sony Image Director compatible files which can directly be uploaded to a compatible Sony projector via Image Director
 - Disable JVC specific menu entries
-- Bugfix to avoid corruption within config files
+- Bugfix to avoid corruption of config files
 - naming convention of config files has been changed to .sconf, because existing .conf files for JVC projectors are NOT compatible with this tool
 
 Prerequisites
