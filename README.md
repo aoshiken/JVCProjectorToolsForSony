@@ -3,7 +3,7 @@
 With this tool it is possible to create Gamma curves for Sony projectors which can directly be uploaded with the Sony Image Director software (tested with latest V3.1).
 This Tool is a modified version of ARVEHJ's project which can be found under:https://github.com/arvehj/jvcprojectortools)
 
-The following changes had been made in comparison to the originel V0.0.2 by ARVEHJ:
+The following changes had been made in comparison to the V0.0.2 developed by ARVEHJ:
 - Creates 1024 (10Bit) steps Gamma curves for Sony-Projectors instead of only 256 (8Bit) curves for JVC projectors
 - Creates Sony Image Director compatible files which can directly be uploaded to a compatible Sony projector via Image Director
 - Disable JVC specific menu entries
