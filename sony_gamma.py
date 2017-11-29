@@ -187,7 +187,7 @@ class GammaCurve():
             file.write(dummyzero.to_bytes(5, byteorder='little')) #Header: 0-Filler
             file.write(bytes.fromhex("0200".encode("utf-8").hex())) #Header: ?
             file.write(dummyzero.to_bytes(4, byteorder='little')) #Header: 0-Filler
-            file.write(bytes.fromhex("VPL-VWxxxxES".encode("utf-8").hex())) #Header: Projector-Model
+            file.write(bytes.fromhex("VPL-xWxxxxES".encode("utf-8").hex())) #Header: Projector-Model
             file.write(dummyzero.to_bytes(4, byteorder='little')) #Header: 0-Filler
             file.write(bytes.fromhex("0".encode("utf-8").hex())) #Header: ?
             file.write(dummyzero.to_bytes(15, byteorder='little')) #Header: 0-Filler
@@ -203,9 +203,13 @@ class GammaCurve():
             file.write(dummyzero.to_bytes(431, byteorder='little')) #Header: 0-Filler
 			#Gamma for R,G,B
             for x in range(0,3):
+                stepposition = 0
                 for item in self.table:
                     reversed_item = 1023 - item
+                    if reversed_item < 1:
+                        reversed_item = 1
                     file.write(reversed_item.to_bytes(2, byteorder='little'))
+                    stepposition = stepposition + 1
         print('Saved gamma data for Sony Impage-Director to', idt_file)
 
     def set(self, param, val):
